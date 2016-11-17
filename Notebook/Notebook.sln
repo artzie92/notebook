@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebook.Website", "Website\Notebook.Website\Notebook.Website.csproj", "{DA5199E9-02AC-4F73-9ADC-E732B7CF2F95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{CD6B920E-7934-4A58-9083-E96C09985541}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webapi", "Webapi", "{DDCABBB3-89D6-4748-B559-40E12A8FB5A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notebook.Webapi", "Notebook.Webapi\Notebook.Webapi.csproj", "{91234B68-2968-4D72-88DF-8EDBD96BE286}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA5199E9-02AC-4F73-9ADC-E732B7CF2F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA5199E9-02AC-4F73-9ADC-E732B7CF2F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA5199E9-02AC-4F73-9ADC-E732B7CF2F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA5199E9-02AC-4F73-9ADC-E732B7CF2F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91234B68-2968-4D72-88DF-8EDBD96BE286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91234B68-2968-4D72-88DF-8EDBD96BE286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91234B68-2968-4D72-88DF-8EDBD96BE286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91234B68-2968-4D72-88DF-8EDBD96BE286}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA5199E9-02AC-4F73-9ADC-E732B7CF2F95} = {CD6B920E-7934-4A58-9083-E96C09985541}
+		{91234B68-2968-4D72-88DF-8EDBD96BE286} = {DDCABBB3-89D6-4748-B559-40E12A8FB5A9}
+	EndGlobalSection
+EndGlobal

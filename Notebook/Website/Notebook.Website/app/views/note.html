@@ -1,0 +1,19 @@
+﻿<form>
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" [(ngModel)]="currentNote.Title" name="Title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Content</label>
+        <textarea class="form-control" [(ngModel)]="currentNote.Content" name="Content"></textarea>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-danger" style="width:100px;">Remove</button>
+        </div>
+        <div class="col-md-6 text-right">
+            <button type="submit" class="btn btn-success" style="width:100px;" (click)="saveNote()">Save</button>
+        </div>
+    </div>
+    
+</form>
