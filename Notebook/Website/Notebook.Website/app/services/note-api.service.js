@@ -19,8 +19,6 @@ var NoteApiService = (function () {
         this.http = http;
     }
     NoteApiService.prototype.ngOnInit = function () {
-        //this.getNotes()
-        //    .subscribe(l => this.notes = l);
     };
     NoteApiService.prototype.getNotes = function () {
         var url = "http://localhost:36428/api/notes/";
@@ -38,9 +36,13 @@ var NoteApiService = (function () {
         var url = "http://localhost:36428/api/notes/";
         return this.http.post(url, note);
     };
-    NoteApiService.prototype.updateNote = function (NoteModel) {
+    NoteApiService.prototype.updateNote = function (note) {
+        var url = "http://localhost:36428/api/notes/" + note.Id;
+        return this.http.put(url, note);
     };
     NoteApiService.prototype.deleteNote = function (id) {
+        var url = "http://localhost:36428/api/notes/" + id;
+        return this.http.delete(url);
     };
     NoteApiService = __decorate([
         core_1.Injectable(), 

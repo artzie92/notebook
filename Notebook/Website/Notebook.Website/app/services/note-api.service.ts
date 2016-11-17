@@ -16,8 +16,7 @@ export class NoteApiService implements OnInit{
     constructor(private http: Http) { }
 
     ngOnInit(): void {
-        //this.getNotes()
-        //    .subscribe(l => this.notes = l);
+        
     }
 
    
@@ -42,12 +41,14 @@ export class NoteApiService implements OnInit{
         return this.http.post(url, note);
     }
 
-    updateNote(NoteModel): void {
-        
+    updateNote(note:NoteModel){
+        var url = "http://localhost:36428/api/notes/" + note.Id;
+        return this.http.put(url, note);
     }
 
-    deleteNote(id: number): void {
-
+    deleteNote(id: number) {
+        var url = "http://localhost:36428/api/notes/" + id;
+        return this.http.delete(url);
     }
 
   

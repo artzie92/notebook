@@ -10,9 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var note_api_service_1 = require('../services/note-api.service');
+var router_1 = require('@angular/router');
+var common_1 = require('@angular/common');
 var DashboardComponent = (function () {
-    function DashboardComponent(noteApiService) {
+    function DashboardComponent(noteApiService, router) {
         this.noteApiService = noteApiService;
+        this.router = router;
     }
     DashboardComponent.prototype.ngOnInit = function () {
         this.list = this.noteApiService.notes;
@@ -21,14 +24,22 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.getNotes = function () {
         var _this = this;
         this.noteApiService.getNotes()
-            .subscribe(function (l) { _this.noteApiService.notes = l; _this.list = _this.noteApiService.notes; });
+            .subscribe(function (l) {
+            _this.noteApiService.notes = l;
+            _this.list = _this.noteApiService.notes;
+        });
+    };
+    DashboardComponent.prototype.goToNote = function (note) {
+        var link = ['/note', note.Id];
+        this.router.navigate(link);
     };
     DashboardComponent = __decorate([
         core_1.Component({
             selector: 'my-note',
-            templateUrl: 'app/views/dashboard.html'
+            templateUrl: 'app/views/dashboard.html',
+            providers: [common_1.Location]
         }), 
-        __metadata('design:paramtypes', [note_api_service_1.NoteApiService])
+        __metadata('design:paramtypes', [note_api_service_1.NoteApiService, router_1.Router])
     ], DashboardComponent);
     return DashboardComponent;
 }());

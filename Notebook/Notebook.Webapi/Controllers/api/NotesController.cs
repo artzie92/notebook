@@ -19,7 +19,7 @@ namespace Notebook.Webapi.Controllers.api
         // GET: api/Notes
         public IQueryable<Note> GetNotes()
         {
-            return db.Notes;
+            return db.Notes.OrderByDescending(o=>o.CreatedOn);
         }
 
         // GET: api/Notes/5
